@@ -12,7 +12,7 @@ namespace FizzBuzz
             {
                 return BuzzStrategy.Execute();
             }
-            return null;
+            return input.ToString();
         }
     }
 }
