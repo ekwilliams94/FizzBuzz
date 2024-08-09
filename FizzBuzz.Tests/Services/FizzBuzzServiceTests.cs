@@ -19,6 +19,13 @@ namespace FizzBuzz.Tests.Services
             Assert.Equal("Buzz", result);
         }
 
+        [Fact]
+        public void ShouldPrintBuzzWhenNumberDivisibleBy5()
+        {
+            var result = sut.GetFizzBuzzOutput(10);
+            Assert.Equal("Buzz", result);
+        }
+
         [Theory]
         [InlineData(1, null)]
         [InlineData(3, typeof(FizzStrategy))]
