@@ -1,12 +1,6 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace FizzBuzz.Strategies
+﻿namespace FizzBuzz.Strategies
 {
-    internal interface IFizzBuzzStrategy
+    public interface IFizzBuzzStrategy
     {
         public string Execute();
     }
