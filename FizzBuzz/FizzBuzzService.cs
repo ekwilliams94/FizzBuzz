@@ -24,6 +24,10 @@ namespace FizzBuzz
 
             foreach (var type in strategyTypes)
             {
+                if (type.Name.Contains("Fizz") && input % 3 == 0)
+                {
+                    return type;
+                }
                 if (type.Name.Contains("Buzz") && input % 5 == 0)
                 {
                     return type;
