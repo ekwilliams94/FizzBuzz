@@ -13,10 +13,10 @@ namespace FizzBuzz.Tests.Services
         }
 
         [Fact]
-        public void ShouldPrintBuzzWhenNumberDivisibleBy3()
+        public void ShouldPrintFizzWhenNumberDivisibleBy3()
         {
             var result = sut.GetFizzBuzzOutput(9);
-            Assert.Equal("Buzz", result);
+            Assert.Equal("Fizz", result);
         }
 
         [Fact]

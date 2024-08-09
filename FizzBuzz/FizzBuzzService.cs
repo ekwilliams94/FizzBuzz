@@ -8,10 +8,14 @@ namespace FizzBuzz
     {
         public string GetFizzBuzzOutput(int input)
         {
-            var BuzzStrategy = new BuzzStrategy();
-            if (input % 3 == 0)
+            var strategyType = GetStrategyType(input);
+
+            if (strategyType != null)
             {
-                return BuzzStrategy.Execute();
+                var strategyInstance = Activator.CreateInstance(strategyType) as IStrategy;
+
+                var context = new Context(strategyInstance);
+                return context.ExecuteStrategy();
             }
             return input.ToString();
         }
