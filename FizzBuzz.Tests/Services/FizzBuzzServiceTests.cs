@@ -7,7 +7,7 @@
         [Fact]
         public void ShouldPrintBuzzWhenNumberDivisibleBy3()
         {
-            var result = sut.GetFizzBuzzOutput();
+            var result = sut.GetFizzBuzzOutput(9);
             Assert.Equal("Buzz", result);
         }
     }
