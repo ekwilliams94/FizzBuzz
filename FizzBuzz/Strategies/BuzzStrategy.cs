@@ -1,6 +1,6 @@
 ﻿namespace FizzBuzz.Strategies
 {
-    public class BuzzStrategy
+    public class BuzzStrategy: IFizzBuzzStrategy
     {
         public string Execute()
         {

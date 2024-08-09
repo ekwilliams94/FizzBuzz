@@ -1,12 +1,14 @@
-﻿using System;
-using System.Collections.Generic;
-using System.Linq;
-using System.Text;
-using System.Threading.Tasks;
-
-namespace FizzBuzz.Tests.Services
+﻿namespace FizzBuzz.Tests.Services
 {
-    internal class FizzBuzzServiceTests
+    public class FizzBuzzServiceTests
     {
+        private readonly FizzBuzzService sut = new();
+
+        [Fact]
+        public void ShouldPrintBuzzWhenNumberDivisibleBy3()
+        {
+            var result = sut.GetFizzBuzzOutput();
+            Assert.Equal("Buzz", result);
+        }
     }
 }
