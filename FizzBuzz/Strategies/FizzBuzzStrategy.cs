@@ -1,10 +1,10 @@
 ﻿namespace FizzBuzz.Strategies
 {
-    public class FizzStrategy: IStrategy
+    public class FizzBuzzStrategy : IStrategy
     {
         public string Execute()
         {
-            return "Fizz";
+            return "FizzBuzz";
         }
     }
 }

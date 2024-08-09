@@ -1,6 +1,6 @@
 ﻿namespace FizzBuzz.Strategies
 {
-    public interface IFizzBuzzStrategy
+    public interface IStrategy
     {
         public string Execute();
     }

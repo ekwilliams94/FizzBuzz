@@ -23,6 +23,7 @@ namespace FizzBuzz.Tests.Services
         [InlineData(1, null)]
         [InlineData(3, typeof(FizzStrategy))]
         [InlineData(5, typeof(BuzzStrategy))]
+        [InlineData(15, typeof(FizzBuzzStrategy))]
 
         public void GetStrategyType_ReturnsCorrectType(int input, Type expectedType)
         {

@@ -1,10 +1,10 @@
 ﻿namespace FizzBuzz.Strategies
 {
-    public class Context(IFizzBuzzStrategy strategy)
+    public class Context(IStrategy strategy)
     {
-        private IFizzBuzzStrategy _strategy = strategy;
+        private IStrategy _strategy = strategy;
 
-        public void SetStrategy(IFizzBuzzStrategy strategy)
+        public void SetStrategy(IStrategy strategy)
         {
             _strategy = strategy;
         }

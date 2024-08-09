@@ -20,19 +20,20 @@ namespace FizzBuzz
         {
             var strategyTypes = Assembly.GetExecutingAssembly()
                 .GetTypes()
-                .Where(t => typeof(IFizzBuzzStrategy).IsAssignableFrom(t) && !t.IsInterface && !t.IsAbstract);
+                .Where(t => typeof(IStrategy).IsAssignableFrom(t) && !t.IsInterface && !t.IsAbstract);
 
-            foreach (var type in strategyTypes)
-            {
-                if (type.Name.Contains("Fizz") && input % 3 == 0)
+                if(input % 3 == 0 && input % 5 == 0)
                 {
-                    return type;
+                    return strategyTypes.FirstOrDefault(GetStrategyType => GetStrategyType.Name.Contains("FizzBuzzStrategy"));
                 }
-                if (type.Name.Contains("Buzz") && input % 5 == 0)
+                if (input % 3 == 0)
                 {
-                    return type;
-                }
+                    return strategyTypes.FirstOrDefault(GetStrategyType => GetStrategyType.Name.Contains("FizzStrategy"));
             }
+                if (input % 5 == 0)
+                {
+                    return strategyTypes.FirstOrDefault(GetStrategyType => GetStrategyType.Name.Contains("BuzzStrategy"));
+                }
 
             return null;
         }
