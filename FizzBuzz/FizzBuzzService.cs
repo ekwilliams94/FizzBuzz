@@ -16,9 +16,21 @@ namespace FizzBuzz
             return input.ToString();
         }
 
-        public Type? GetType()
+        public Type? GetStrategyType(int input)
         {
-            throw new NotImplementedException();
+            var strategyTypes = Assembly.GetExecutingAssembly()
+                .GetTypes()
+                .Where(t => typeof(IFizzBuzzStrategy).IsAssignableFrom(t) && !t.IsInterface && !t.IsAbstract);
+
+            foreach (var type in strategyTypes)
+            {
+                if (type.Name.Contains("Buzz") && input % 5 == 0)
+                {
+                    return type;
+                }
+            }
+
+            return null;
         }
     }
 }

@@ -20,9 +20,9 @@ namespace FizzBuzz.Tests.Services
         }
 
         [Fact]
-        public void GetType_ReturnsCorrectType()
+        public void GetStrategyType_ReturnsCorrectType()
         {
-            var result = sut.GetType();
+            var result = sut.GetStrategyType(5);
             Assert.Equal(typeof(BuzzStrategy), result);
         }
     }
