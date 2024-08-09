@@ -1,5 +1,6 @@
 ﻿
 using FizzBuzz.Strategies;
+using System.Reflection;
 
 namespace FizzBuzz
 {
@@ -13,6 +14,11 @@ namespace FizzBuzz
                 return BuzzStrategy.Execute();
             }
             return input.ToString();
+        }
+
+        public Type? GetType()
+        {
+            throw new NotImplementedException();
         }
     }
 }

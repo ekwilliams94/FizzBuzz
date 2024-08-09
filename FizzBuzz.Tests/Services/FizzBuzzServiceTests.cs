@@ -1,4 +1,6 @@
-﻿namespace FizzBuzz.Tests.Services
+﻿using FizzBuzz.Strategies;
+
+namespace FizzBuzz.Tests.Services
 {
     public class FizzBuzzServiceTests
     {
@@ -15,6 +17,13 @@
         {
             var result = sut.GetFizzBuzzOutput(9);
             Assert.Equal("Buzz", result);
+        }
+
+        [Fact]
+        public void GetType_ReturnsCorrectType()
+        {
+            var result = sut.GetType();
+            Assert.Equal(typeof(BuzzStrategy), result);
         }
     }
 }
