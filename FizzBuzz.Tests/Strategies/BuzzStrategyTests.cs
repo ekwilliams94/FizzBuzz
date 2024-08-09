@@ -4,7 +4,7 @@ namespace FizzBuzz.Tests.Strategies
 {
     public class BuzzStrategyTests
     {
-        private readonly FizzStrategy sut = new();
+        private readonly BuzzStrategy sut = new();
 
         [Fact]
         public void ShouldReturnBuzz()
