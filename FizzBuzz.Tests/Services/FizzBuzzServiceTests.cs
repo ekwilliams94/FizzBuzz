@@ -19,11 +19,15 @@ namespace FizzBuzz.Tests.Services
             Assert.Equal("Buzz", result);
         }
 
-        [Fact]
-        public void GetStrategyType_ReturnsCorrectType()
+        [Theory]
+        [InlineData(1, null)]
+        [InlineData(3, typeof(FizzStrategy))]
+        [InlineData(5, typeof(BuzzStrategy))]
+
+        public void GetStrategyType_ReturnsCorrectType(int input, Type expectedType)
         {
-            var result = sut.GetStrategyType(5);
-            Assert.Equal(typeof(BuzzStrategy), result);
+            var result = sut.GetStrategyType(input);
+            Assert.Equal(expectedType, result);
         }
     }
 }
