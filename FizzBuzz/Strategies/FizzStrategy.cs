@@ -4,7 +4,7 @@
     {
         public string Execute()
         {
-            throw new NotImplementedException();
+            return "Fizz";
         }
     }
 }
